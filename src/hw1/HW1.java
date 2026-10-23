@@ -1,21 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hw1;
+import java.awt.*;
 
-/**
- *
- * @author hp-user
- */
 public class HW1 {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+      Store<Phone>PhoneStore = new Store<>();
+      PhoneStore.addItem(new Phone("Samsung"));
+      PhoneStore.useItem();
+      System.out.println("------------------");
+       Store<Laptop>LabtopStore = new Store<>();
+      LabtopStore.addItem(new Laptop("DELL"));
+      LabtopStore.useItem();
+      System.out.println("------------------");
+      Phone p = PhoneStore.getItem();
+      System.out.println("Retrieved"+p.getName()); 
     }
     
 }
